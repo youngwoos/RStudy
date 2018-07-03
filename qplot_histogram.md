@@ -42,7 +42,7 @@ qplot(var)
 
 ![](qplot_histogram_files/figure-markdown_github/unnamed-chunk-4-1.png)
 
-지정된 계급 구간의 개수로 모든 값을 표현할 수 없으면, 계급 구간의 폭과 상한값에서 하한값 까지의 범위를 조정한다.
+지정된 계급 구간의 개수로 모든 값을 표현할 수 없으면, 계급 구간의 폭과 상한값에서 하한값까지의 범위를 조정한다. 아래 코드로 생성된 그래프를 보면 계급 구간의 폭과 x축의 범위가 달라진 것을 볼 수 있다.
 
 ``` r
 qplot(var) + stat_bin(bins = 5)
@@ -60,7 +60,7 @@ qplot(var, geom = "bar")
 
 ![](qplot_histogram_files/figure-markdown_github/unnamed-chunk-6-1.png)
 
-연속 변수를 `as.factor()`를 이용해 범주 변수로 변경하거나 `as.character()`를 이용해 문자 변수로 변경해도 빈도 막대 그래프를 생성한다.
+연속 변수를 `as.factor()`를 이용해 범주 변수로 변경하거나, `as.character()`를 이용해 문자 변수로 변경해도 빈도 막대 그래프를 생성한다.
 
 ``` r
 qplot(as.factor(var))
