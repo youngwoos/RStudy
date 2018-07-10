@@ -1,6 +1,5 @@
 # R Study Group
 
-
 ## QnA
 
 ---
