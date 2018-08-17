@@ -85,14 +85,12 @@ table(is.na(air$hpg_store_id))
 table(is.na(hpg$air_store_id))
 
 # hpg_id와 매칭 안되는 air_id 갯수 - 183개
-air_unique <- data.frame(air_store_id = unique(air$air_store_id))
-tmp <- left_join(air_unique, store_id_relation, by = "air_store_id")
-table(is.na(tmp$hpg_store_id))
+length(setdiff(unique(air$air_store_id), 
+               store_id_relation$air_store_id))
 
 # air_id와 매칭 안되는 hpg_id 갯수 - 13,175개
-hpg_unique <- data.frame(hpg_store_id = unique(hpg$hpg_store_id))
-tmp <- left_join(hpg_unique, store_id_relation, by = "hpg_store_id")
-table(is.na(tmp$air_store_id))
+length(setdiff(unique(hpg$hpg_store_id), 
+               store_id_relation$hpg_store_id))
 
 #*******************************************************#
 

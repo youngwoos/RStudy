@@ -1,9 +1,9 @@
 ---
-title: "impute by WindowFunction"
-output: html_document
+title: "Imputation by Window Function"
+output: github_document
 ---
 
-```{r}
+```{r, message=F}
 library(dplyr)
 
 df <- data.frame(x=c(1,2,NA,3))
