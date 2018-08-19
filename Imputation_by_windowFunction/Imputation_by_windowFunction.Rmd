@@ -1,3 +1,9 @@
+---
+title: "Imputation by Window Function"
+output: github_document
+---
+
+```{r, message=F}
 library(dplyr)
 
 df <- data.frame(x=c(1,2,NA,3))
@@ -26,3 +32,4 @@ df %>%
 # mutate()에 적용 - fill() 출력 값이 data.frame이므로 변수 지정해서 추출
 df %>% 
   mutate(y = fill(df, x, .direction = "down")$x)
+```
